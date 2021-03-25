@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SSIS_PDS_Template_od2"
   DTS:PackageType="5"
-  DTS:VersionBuild="42"
-  DTS:VersionGUID="{16107866-D2F9-459C-8F3F-286C1FFC073F}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{28DAFCFC-341C-45C0-860B-2B9D459B5CC7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

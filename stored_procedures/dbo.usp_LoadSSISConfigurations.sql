@@ -23,9 +23,9 @@ PURPOSE: Load the SSIS Configurations table
 MODIFICATION LOG:
 Ver      Date        Author           Description
 -------  ----------  ---------------  ------------------------------------------------------------------------
-1.0      02/19/2021  ODANYLIUK         1. Created this process for LDS BC IT243
-1.1      03/15/2021  ODANYLIUK         1. Added conn_DFNB3 connection configuration
-
+1.0      02/19/2021  ODANYLIUK         1.Created this process for LDS BC IT243
+1.1      03/15/2021  ODANYLIUK         1.Added conn_DFNB3 connection configuration
+1.2      03/16/2021  ODANYLIUK         1.Added LoadDFNB3_od configuration
 
 
 
@@ -112,7 +112,7 @@ SELECT c.*
     VALUES
           (
            'LDSBC_IT243_od'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+		 , 'C:\Users\olga1\Desktop\IT 243\week 01\DFNB_src\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
@@ -138,7 +138,7 @@ SELECT c.*
     VALUES
           (
            'SSIS_PDS_Template_od'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+		 , 'C:\Users\olga1\Desktop\IT 243\week 01\DFNB_src\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
@@ -151,7 +151,7 @@ SELECT c.*
      WHERE ConfigurationFilter = 'LoadDFNB3_od';
 	
 
-	-- 3.1.1) v_data_share_root
+	-- 3.2.1) v_data_share_root
 
     INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
                                         , ConfiguredValue
@@ -160,7 +160,7 @@ SELECT c.*
     VALUES
           (
            'LoadDFNB3_od'
-		 , 'C:\Users\z035330\Documents\JJAUSSI\Other\JC\projects\LDSBC\IT_243\repos\DFNB_src\txt_files\'
+		 , 'C:\Users\olga1\Desktop\IT 243\week 01\DFNB_src\txt_files\'
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
