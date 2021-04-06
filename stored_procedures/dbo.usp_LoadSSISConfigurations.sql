@@ -27,7 +27,7 @@ Ver      Date        Author           Description
 1.1      03/15/2021  ODANYLIUK         1.Added conn_DFNB3 connection configuration
 1.2      03/16/2021  ODANYLIUK         1.Added LoadDFNB3_od configuration
 1.3      03/26/2021  ODANYLIUK         1.Added LoadEXM_od configuration
-
+1.4      03/28/2021  ODANYLIUK         1.Added LoadNAICSCodeHierDim_od configuration
 
 
 RUNTIME: 
@@ -187,6 +187,27 @@ SELECT c.*
          , '\Package.Variables[User::v_data_share_root].Properties[Value]'
          , 'String'
           );
+
+	-- 3.4) LoadNAICSCodeHierDim_od
+
+    DELETE FROM dbo.[SSIS Configurations]
+     WHERE ConfigurationFilter = 'LoadNAICSCodeHierDim_od';
+	
+
+	-- 3.4.1) v_data_share_root
+
+    INSERT INTO dbo.[SSIS Configurations](ConfigurationFilter
+                                        , ConfiguredValue
+                                        , PackagePath
+                                        , ConfiguredValueType)
+    VALUES
+          (
+           'LoadNAICSCodeHierDim_od'
+		 , 'C:\Users\olga1\Desktop\IT 243\week 01\DFNB_dw\xls_files\'
+         , '\Package.Variables[User::v_data_share_root].Properties[Value]'
+         , 'String'
+          );
+
 
 
 END;
